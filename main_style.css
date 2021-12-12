@@ -1106,7 +1106,7 @@ footer:nth-child(2) {
 
 .item {
   width: 14vw;
-  height: 28vh;
+  height: 41vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1118,7 +1118,7 @@ footer:nth-child(2) {
   .item {
     width:62vw;
     font-size: 0.8em;
-    height:41vh;
+
   }
 }
 
