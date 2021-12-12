@@ -1058,6 +1058,11 @@ footer:nth-child(2) {
 
 
 /*  doradztwo */
+
+#back-btn{
+  padding: 25px;
+}
+
 .subpage {
   overflow-x: hidden;
   display: flex;
