@@ -1,3 +1,6 @@
+$(document).ready(function(){
+
+
 let bodyElm = document.querySelector("body");
 
 //cursor blinking style
@@ -126,3 +129,12 @@ $(window).scroll(function(e) {
 });
 
 // facebook plugin
+
+
+
+
+
+
+
+
+});
