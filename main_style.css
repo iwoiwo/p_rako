@@ -185,6 +185,7 @@ a:hover {
 
 body {
   background: radial-gradient(#293b49 0%, #0e2131 70%);
+  /*background: radial-gradient(#293b49 0%, #0a284d 70%);*/
   background-repeat: no-repeat;
   /*cursor: url(images/cursor.png) 16 16 , auto */
   cursor: none;
