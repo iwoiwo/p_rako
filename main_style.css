@@ -1128,6 +1128,11 @@ footer:nth-child(2) {
   align-content: center;
   justify-content: center;
 }
+.subpage-plain h4{
+  color: #eacc4e;
+  font-size: 2em;
+  margin: 0 auto;
+}
 .images{
   width:40vw;
   height:auto;
