@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 
+
+
 let bodyElm = document.querySelector("body");
 
 //cursor blinking style
@@ -13,10 +15,10 @@ document.addEventListener('mousemove', e => {
 
 
 //  scroll arrow
-if( bodyElm.classList.contains('index-body')){
+
 
 const arrowDown = document.getElementById('triangle-down');
-const frame = document.querySelector('.yellow-outline');
+//const frame = document.querySelector('.yellow-outline');
 
 let didScroll = false;
 window.onscroll = () => didScroll = true;
@@ -29,7 +31,7 @@ setInterval(() => {
     }
 }, 150);
 
-}
+
 // scroll to id
 
 if( $('a[href^="#front-page"]') || $('a[href^="#second-page"]') || $('a[href^="#about-page"]') || $('a[href^="#contact-page"]') ){
@@ -42,66 +44,6 @@ if( $('a[href^="#front-page"]') || $('a[href^="#second-page"]') || $('a[href^="#
     }, 1000, 'swing');
 });
 }
-
-// horizontal scroll
-
-let subpageWidth = $(".subpage").width();
-let timelineWidth = $(".timeline").width();
-let docWidth = $(document).width();
-
- // 2172
-console.log(subpageWidth) //2172
-console.log(timelineWidth)//3040.78
-console.log(docWidth)//1920
-
-console.log(timelineWidth - docWidth)
-
-
-if( bodyElm.classList.contains('doradztwo')){
-
-
-
-const scrollContainer = document.querySelector(".subpage");
-const timeline = document.querySelector(".timeline");
-
-
-scrollContainer.addEventListener("wheel", (evt) => {
-
-    evt.preventDefault();
-    scrollContainer.scrollLeft += evt.deltaY;
-
-  //  console.log(timeline.scrollLeft) //0
-//  console.log(scrollContainer.scrollLeft)
-//  console.log(timelineWidth - docWidth)
-
-
-  if(scrollContainer.scrollLeft >= (timelineWidth - docWidth)){
-    console.log("now")
-    scrollContainer.scrollLeft == 0;
-    document.querySelector(".main").scrollBottom += evt.deltaX;
-evt.preventDefault();
-  }
-
-
-  });
-
-//  console.log(  "timeline scrollLeft" + scrollContainer.scrollLeft) //850.5
-  //console.log(  "scrollX" + scrollContainer.scrollX) // undefined
-  //console.log( "pageoffset" + window.pageXOffset)  // 0
-//  console.log(  "window inner width" + window.innerWidth ) // 2030
-//  console.log(  "window outer width" + window.outerWidth ) // 2026
-//  console.log("elems width" + scrollContainer.offsetWidth)//2026
-//  console.log("client width" + scrollContainer.clientWidth)//2026
-
-
-
-
-
-};
-
-
-
-
 
 // burger opening menu
 
@@ -128,7 +70,38 @@ $(window).scroll(function(e) {
 
 });
 
-// facebook plugin
+// animation background
+
+$('body').scroll(function() {
+
+let scrollTop = $window.scrollTop();
+
+$('.bg0').css('transform', 'translateY(' + -(scrollTop / 2) + 'px)');
+
+});
+
+
+// timeline bio
+
+
+      $('#left-arrow').click(function() {
+          console.log('clicked');
+          let positionLeft =  $('#scroll-container').scrollLeft();
+          event.preventDefault();
+         $('#scroll-container').animate({
+           scrollLeft: positionLeft + 350 + "px"
+         }, 1000, 'swing');
+      });
+
+      $('#right-arrow').click(function() {
+          console.log('clicked');
+          let positionRight =  $('#scroll-container').scrollLeft();
+          event.preventDefault();
+         $('#scroll-container').animate({
+           scrollLeft: positionRight - 350 + "px"
+         }, 1000, 'swing');
+      });
+
 
 
 
