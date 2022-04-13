@@ -418,7 +418,11 @@ to {
 .halfscreen{
   height:70vh;
 }
+@media screen and (max-width: 768px) {
+  .halfscreen {
 
+  }
+}
 .bottomspacing{
   padding-bottom:12vh;
 }
@@ -449,12 +453,6 @@ to {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container-bio {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -926,7 +924,6 @@ width:100vw;
 }
 #contact-anim{
   position:absolute;
-  height:10vh;
   width:100vw;
 }
 .bg3{
@@ -1262,7 +1259,7 @@ to {
 
 #scroll-container{
   width:70vw;
-  height: 32vh;
+  height: 50vh;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -1280,7 +1277,7 @@ to {
 
 .arrows{
   width:38px;
-  height: 32vh;
+  height: 50vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1316,20 +1313,11 @@ to {
     transform: translate(0, 0);
   }
 }
-@media screen and (max-width: 768px) {
-  .arrows {
-    height:28px;
-    width:28px;
-  }
-  .arrows img{
-    height:28px;
-    width:28px;
-  }
-}
+
 .item {
   width: 300px;
-  height: 32vh;
-  margin-top:1vh;
+  height: 30vh;
+  margin-top:10vh;
   display:inline-block;
   vertical-align: middle;
   margin-left:40px;
